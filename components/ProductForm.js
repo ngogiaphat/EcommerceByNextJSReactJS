@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+import {useEffect, useState} from "react";
+import {useRouter} from "next/router";
 import axios from "axios";
 import Spinner from "@/components/Spinner";
-import { ReactSortable } from "react-sortablejs";
+import {ReactSortable} from "react-sortablejs";
 export default function ProductForm({
 	_id,
 	title: existingTitle,

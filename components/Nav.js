@@ -1,15 +1,15 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { signOut } from 'next-auth/react';
+import {useRouter} from 'next/router';
+import {signOut} from 'next-auth/react';
 import Logo from '@/components/Logo';
-export default function Nav() {
+export default function Nav(){
 	const inactiveLink = 'flex gap -1 p-1';
 	const activeLink = inactiveLink + 'bg-highlight text-black rounded-sm';
 	const inactiveIcon = 'w-6 h-6';
 	const activeIcon = inactiveIcon + ' text-primary';
 	const router = useRouter();
 	const {pathname} = router;
-	async function logout() {
+	async function logout(){
 		await router.push('/');
 		await signOut();
 	}
